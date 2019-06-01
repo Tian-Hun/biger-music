@@ -1,0 +1,11 @@
+button.icon-button {
+    background: none;
+    border: none;
+    line-height: 0;
+    outline: none;
+    cursor: pointer;
+
+    .icon {
+        fill: currentColor;
+    }
+}

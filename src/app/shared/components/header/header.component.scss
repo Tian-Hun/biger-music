@@ -1,0 +1,32 @@
+@import "variables";
+
+.header {
+    position: fixed;
+    top: 2.2vw;
+    color: $primary;
+    z-index: 103;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    padding: 0 2.2vw;
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-bar {
+            color: $primary;
+            margin-right: 15px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            color: $primary;
+        }
+    }
+
+}

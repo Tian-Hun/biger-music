@@ -1,0 +1,13 @@
+<div class="progress-slider">
+    <div class="bar" #bar (click)="onBarClick($event)" (mousemove)="handlerSliding($event)" (panmove)="handlerSliding($event)">
+        <span class="handle" [ngClass]="{
+                                'active': isHandlerActive && currentHandlerIndex === 0,
+                                'last-active': currentHandlerIndex === 0
+                            }"
+              [style.left.%]="handlerX" (mousedown)="setHandlerActive($event)" (panstart)="setHandlerActive($event)">
+        </span>
+        <div class="filler">
+            <span [style.left.%]="0" [style.width.%]="handlerX"></span>
+        </div>
+    </div>
+</div>

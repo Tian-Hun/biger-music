@@ -1,0 +1,74 @@
+@import "variables";
+
+$bar-background-color: rgba(225, 225, 225, 0.12);
+$filler-background-color: rgba(225, 33, 32, 0.5);
+
+:host {
+    width: 100%;
+}
+
+.progress-slider {
+    display: block;
+    width: 100%;
+    height: 24px;
+    cursor: default;
+    position: relative;
+    margin-right: 15px;
+    opacity: 1;
+    vertical-align: middle;
+
+    &:hover {
+        & .handle {
+            opacity: 1 !important;
+        }
+    }
+
+    .bar {
+        width: 100%;
+        height: 2px;
+        background: $bar-background-color;
+        border-radius: 2px;
+        box-shadow: inset 1px 1px 5px darken($bar-background-color, 18%);
+        position: absolute;
+        top: 12px;
+        cursor: pointer;
+
+        & > .handle {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: $primary;
+            border-radius: 50%;
+            position: absolute;
+            top: -5px;
+            margin-left: -10px;
+            z-index: 1;
+            cursor: move;
+            transition: left 200ms ease, opacity 250ms ease-in;
+        ;
+            opacity: 0;
+
+            &.last-active {
+                z-index: 2;
+            }
+        }
+
+        .filler {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+
+            & > span {
+                display: inline-block;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                background: $filler-background-color;
+                transition: all 0.2s ease;
+            }
+        }
+    }
+}
