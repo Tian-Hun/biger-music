@@ -21,6 +21,7 @@
         "prefer-inline-decorator": false,
         "no-implicit-dependencies": false,
         "only-arrow-functions": false,
-        "no-invalid-this": false
+        "no-invalid-this": false,
+        "newline-per-chained-call": false
     }
 }

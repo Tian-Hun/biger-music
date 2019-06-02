@@ -18,6 +18,7 @@ export class PlayerService {
     albums: Array<Album>;
     songChange: BehaviorSubject<Song> = new BehaviorSubject<Song>(void (0));
     progress: Progress;
+    analyserChage: BehaviorSubject<any> = new BehaviorSubject<any>(void (0));
 
     private currentIndex = 0;
     private randomLoop = false;
@@ -43,6 +44,17 @@ export class PlayerService {
         private http: HttpClient,
         private ngForage: NgForage
     ) {
+        this.initialize();
+
+        this.progress = {
+            duration: '',
+            value: this.progressValue,
+            time: this.progressTime,
+            loaded: this.progressLoaded
+        };
+    }
+
+    private initialize(): void {
         combineLatest(
             this.http.get(this.dataUrl)
                 .pipe(
@@ -63,13 +75,12 @@ export class PlayerService {
                     this.ngForage.setItem(_playlistKey, data.albums[0].songs);
                 }
             });
+    }
 
-        this.progress = {
-            duration: '',
-            value: this.progressValue,
-            time: this.progressTime,
-            loaded: this.progressLoaded
-        };
+    private createAnalyser(): void {
+        const analyser = Howler.ctx.createAnalyser();
+        Howler.masterGain.connect(analyser);
+        this.analyserChage.next(analyser);
     }
 
     get sound(): Howl {
@@ -79,9 +90,11 @@ export class PlayerService {
         } else {
             this._sound = song.howl = new Howl({
                 src: [song.url],
-                html5: true,
                 preload: true,
-                onplay: () => requestAnimationFrame(this.step.bind(this)),
+                onplay: () => {
+                    requestAnimationFrame(this.step.bind(this));
+                    this.createAnalyser();
+                },
                 onseek: () => requestAnimationFrame(this.step.bind(this)),
                 onload: () => this._progressLoaded.next(true),
                 onend: () => !this.sound.loop() && this.skip(this.randomLoop ? Direction.random : Direction.next),
@@ -110,6 +123,7 @@ export class PlayerService {
     }
 
     public skip(direction: Direction): void {
+        this._progressLoaded.next(false);
         let index = 0;
         if (direction === Direction.prev) {
             index = this.currentIndex - 1;
