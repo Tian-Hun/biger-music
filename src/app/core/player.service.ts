@@ -85,6 +85,8 @@ export class PlayerService {
                 onseek: () => requestAnimationFrame(this.step.bind(this)),
                 onload: () => this._progressLoaded.next(true),
                 onend: () => !this.sound.loop() && this.skip(this.randomLoop ? Direction.random : Direction.next),
+                onloaderror: () => this.skip(Direction.next),
+                onplayerror: () => this.skip(Direction.next)
             });
         }
 
@@ -145,8 +147,12 @@ export class PlayerService {
         loopActions[mode]();
     }
 
-    public volume(value: number): void {
-        Howler.volume(value);
+    public volume(value?: number): void | number {
+        if (value !== void (0)) {
+            Howler.volume(value);
+        } else {
+            return Howler.volume() * 100;
+        }
     }
 
     public seek(percentage: number): void {

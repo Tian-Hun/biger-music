@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Power2, TweenMax } from 'gsap';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter } from 'rxjs/operators';
 
 import { PlayerService } from '@core/player.service';
@@ -25,7 +25,8 @@ export class MiniPlayerComponent implements OnInit, OnDestroy {
     song: Song;
     progress: Progress;
     loopMode: LoopMode;
-    progressSubject = new Subject<number>();
+    progressSubject: Observable<number> = new Subject<number>();
+    volumeSubject: Observable<number> = new Subject<number>();
 
     constructor(
         private player: PlayerService
@@ -47,16 +48,20 @@ export class MiniPlayerComponent implements OnInit, OnDestroy {
         this.progressSubject
             .pipe(debounceTime(500))
             .subscribe(value => this.player.seek(value / 100));
+
+        this.volumeSubject
+            .pipe(debounceTime(200))
+            .subscribe(value => this.player.volume(value));
     }
 
     onPlayClick(): void {
-        buildAnimationForElement(this.playButton.nativeElement, this.pauseButton.nativeElement);
+        buildToggleAnimation(this.playButton.nativeElement, this.pauseButton.nativeElement);
 
         this.player.play();
     }
 
     onPauseClick(): void {
-        buildAnimationForElement(this.pauseButton.nativeElement, this.playButton.nativeElement);
+        buildToggleAnimation(this.pauseButton.nativeElement, this.playButton.nativeElement);
 
         this.player.pause();
     }
@@ -84,7 +89,7 @@ export class MiniPlayerComponent implements OnInit, OnDestroy {
 
         const [original, target] = loopSvg[this.loopMode];
 
-        buildAnimationForElement(original, target);
+        buildToggleAnimation(original, target);
 
         this.loopMode = modes[this.loopMode];
 
@@ -97,7 +102,7 @@ export class MiniPlayerComponent implements OnInit, OnDestroy {
 
 }
 
-export function buildAnimationForElement(original: Element, target: Element): void {
+export function buildToggleAnimation(original: Element, target: Element): void {
     TweenMax.to(original, 0.2, {x: 20, opacity: 0, display: 'none', scale: 0.3, ease: Power2.easeInOut});
     TweenMax.fromTo(target, 0.2,
         {x: -20, opacity: 0, scale: 0.3, display: 'none'},

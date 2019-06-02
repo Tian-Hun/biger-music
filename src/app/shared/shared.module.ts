@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HeaderComponent } from './components/header/header.component';
-import { MiniPlayerComponent } from './components/mini-player/mini-player.component';
-import { ProgressComponent } from './components/progress/progress.component';
+import { HeaderComponent } from '@shared/components/header/header.component';
+import { MiniPlayerComponent } from '@shared/components/mini-player/mini-player.component';
+import { ProgressComponent } from '@shared/components/progress/progress.component';
+import { VolumeSliderComponent } from '@shared/components/volume-slider/volume-slider.component';
 
 @NgModule({
     declarations: [
         HeaderComponent,
         MiniPlayerComponent,
-        ProgressComponent
+        ProgressComponent,
+        VolumeSliderComponent,
     ],
     imports: [
         CommonModule,
@@ -17,7 +19,8 @@ import { ProgressComponent } from './components/progress/progress.component';
     exports: [
         HeaderComponent,
         MiniPlayerComponent,
-        ProgressComponent
+        ProgressComponent,
+        VolumeSliderComponent
     ]
 })
 export class SharedModule {
