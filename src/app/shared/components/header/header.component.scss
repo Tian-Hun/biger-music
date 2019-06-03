@@ -13,20 +13,34 @@
     height: 30px;
     padding: 0 2.2vw;
 
-    .logo {
+    .nav {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
 
         .nav-bar {
             color: $primary;
-            margin-right: 15px;
+            margin-right: 40px;
         }
 
-        .logo-text {
+        .logo {
+            display: flex;
+            align-items: flex-end;
             font-size: 24px;
             color: $primary;
+            position: relative;
+            img {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: -9px;
+            }
+
+            .logo-text {
+                margin-left: 55px;
+            }
         }
+
     }
 
 }

@@ -18,21 +18,23 @@ export class PlayerService {
     albums: Array<Album>;
     songChange: BehaviorSubject<Song> = new BehaviorSubject<Song>(void (0));
     progress: Progress;
-    analyserChage: BehaviorSubject<any> = new BehaviorSubject<any>(void (0));
+    analyserChange: BehaviorSubject<any> = new BehaviorSubject<any>(void (0));
+    playingChange: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
     private currentIndex = 0;
     private randomLoop = false;
     private _sound: Howl;
     private _playlist: Array<Song>;
     private _progressValue: BehaviorSubject<number> = new BehaviorSubject<number>(0);
-    private _progressTime: BehaviorSubject<string> = new BehaviorSubject<string>('00:00');
+    private _progressTime: BehaviorSubject<{original: number, format: string}> =
+        new BehaviorSubject<{original: number, format: string}>({original: 0, format: '00:00'});
     private _progressLoaded: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
     get progressValue(): Observable<number> {
         return this._progressValue.asObservable();
     }
 
-    get progressTime(): Observable<string> {
+    get progressTime(): Observable<{original: number, format: string}> {
         return this._progressTime.asObservable();
     }
 
@@ -66,21 +68,26 @@ export class PlayerService {
             .pipe(map(([albums, songs]) => ({albums, songs})))
             .subscribe((data: {albums: Array<Album>, songs: Array<Song>}) => {
                 this.albums = data.albums;
-                this._playlist = data.songs || [];
-                this.songChange.next(data.songs[0]);
+                if (!data.songs) {
+                    this._playlist = data.albums[0].songs;
 
-                this.progress.duration = this.durationStr;
-
-                if (!data.songs.length) {
-                    this.ngForage.setItem(_playlistKey, data.albums[0].songs);
+                    this.ngForage.setItem(_playlistKey, this._playlist)
+                        .then(_ => {
+                            this.progress.duration = this.durationStr;
+                        });
+                } else {
+                    this._playlist = data.songs;
+                    this.progress.duration = this.durationStr;
                 }
+
+                this.songChange.next(this._playlist[0]);
             });
     }
 
     private createAnalyser(): void {
         const analyser = Howler.ctx.createAnalyser();
         Howler.masterGain.connect(analyser);
-        this.analyserChage.next(analyser);
+        this.analyserChange.next(analyser);
     }
 
     get sound(): Howl {
@@ -92,8 +99,16 @@ export class PlayerService {
                 src: [song.url],
                 preload: true,
                 onplay: () => {
+                    this.playingChange.next(true);
+                    this._progressLoaded.next(true);
                     requestAnimationFrame(this.step.bind(this));
                     this.createAnalyser();
+                },
+                onpause: () => {
+                    this.playingChange.next(false);
+                },
+                onstop: () => {
+                    this.playingChange.next(false);
                 },
                 onseek: () => requestAnimationFrame(this.step.bind(this)),
                 onload: () => this._progressLoaded.next(true),
@@ -124,6 +139,7 @@ export class PlayerService {
 
     public skip(direction: Direction): void {
         this._progressLoaded.next(false);
+
         let index = 0;
         if (direction === Direction.prev) {
             index = this.currentIndex - 1;
@@ -175,7 +191,7 @@ export class PlayerService {
 
     public step(): void {
         const seek: number = (this.sound.seek() as number) || 0;
-        this._progressTime.next(formatTime(Math.round(seek)));
+        this._progressTime.next({original: seek, format: formatTime(Math.round(seek))});
         this._progressValue.next(Number((((seek / this.sound.duration()) * 100) || 0)));
 
         if (this.sound.playing()) {
@@ -184,7 +200,7 @@ export class PlayerService {
     }
 }
 
-export function formatTime(secs): string {
+export function formatTime(secs: number): string {
     const minutes = Math.floor(secs / 60) || 0;
     const seconds = (secs - minutes * 60) || 0;
 

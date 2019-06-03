@@ -45,6 +45,17 @@ export class MiniPlayerComponent implements OnInit, OnDestroy {
             )
             .subscribe(song => this.song = song);
 
+        this.player
+            .playingChange
+            .pipe(distinctUntilChanged())
+            .subscribe(playing => {
+                if (playing) {
+                    buildToggleAnimation(this.playButton.nativeElement, this.pauseButton.nativeElement);
+                } else {
+                    buildToggleAnimation(this.pauseButton.nativeElement, this.playButton.nativeElement);
+                }
+            });
+
         this.progressSubject
             .pipe(debounceTime(500))
             .subscribe(value => this.player.seek(value / 100));
@@ -52,6 +63,7 @@ export class MiniPlayerComponent implements OnInit, OnDestroy {
         this.volumeSubject
             .pipe(debounceTime(200))
             .subscribe(value => this.player.volume(value));
+
     }
 
     onPlayClick(): void {

@@ -1,0 +1,44 @@
+.lyric-wrapper {
+    position: absolute;
+    width: 650px;
+    height: 65%;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-325px);
+    overflow: hidden;
+    z-index: 10;
+
+    .lyric-inner {
+        transition: top 300ms ease-out;
+        transform-origin: 0 0 0;
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 280px;
+
+        p {
+            overflow: hidden;
+            height: 42px;
+            line-height: 42px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 16px;
+            color: rgba(225, 225, 225, .6);
+            text-align: center;
+            margin: 0;
+
+            &.active {
+                font-size: 20px;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}

@@ -21,6 +21,6 @@ export interface Album {
 export interface Progress {
     duration: string;
     value: Observable<number>;
-    time: Observable<string>;
+    time: Observable<{original: number, format: string}>;
     loaded: Observable<boolean>;
 }

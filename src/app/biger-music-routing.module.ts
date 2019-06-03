@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'music',
         pathMatch: 'full'
     },
     {
-        path: 'home',
-        loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
+        path: 'music',
+        loadChildren: () => import('./modules/music/music.module').then(m => m.MusicModule)
     }
 ];
 

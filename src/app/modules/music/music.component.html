@@ -1,0 +1,7 @@
+<div class="lyric-wrapper">
+    <div class="lyric-inner" [style.top.px]="300 - 42 * (currentIndex + 1)">
+        <p [ngClass]="{active: index === currentIndex}" *ngFor="let lyric of lyrics; let index = index">{{lyric[1]}}</p>
+    </div>
+</div>
+
+<canvas #canvas></canvas>
