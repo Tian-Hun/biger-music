@@ -1,27 +1,10 @@
-# BigerMusic
+# Biger Music
+#### 一个逼粉的音乐播放器
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+项目还在开发中，目前完成了基本的播放功能
+    
+数据只维护了两首歌做为测试，后期会陆续添加
 
-## Development server
+> 音频来源: https://github.com/ChangMM/nanjinglizhi  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+> 歌词编辑工具: https://github.com/magic-akari/lrc-maker
