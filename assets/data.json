@@ -1,0 +1,291 @@
+{
+    "albums": [
+        {
+            "cover": "https://i.kfs.io/album/global/45834383,0v1/fit/500x500.jpg",
+            "name": "李志 电声与管弦乐II(Live)",
+            "issueDate": "2018-05-16",
+            "songs": [
+                {
+                    "thumb": "https://i.kfs.io/album/global/45834383,0v1/fit/500x500.jpg",
+                    "url": "https://prqbmw.ch.files.1drv.com/y4mvHk0WHRrzP8ncHI6ao2tMYD61htQzQjVtO0KoIYWOUBfT-zhKjAOIbrZfUATkJL6-1B9hl2X7b1JUrUUyRtaXZ7raq2tET06H8aQ4fAQzUYa9My006tsjyXJLUSS-uwR665qqAGzGd_77GZ8yKpwz-zN6KJbb2MAwBH01FL2zAk9I2Mfgy6xyXhXlSdTTSrVijYRUjyXOMX3vG69_jNRrQ/%E7%9B%B8%E4%BF%A1%E6%9C%AA%E6%9D%A5%E5%BA%8F%E6%9B%B2%20(%E4%B9%90%E6%9B%B2)%20-%20%E6%9D%8E%E5%BF%97.flac",
+                    "title": "相信未来序曲",
+                    "artist": "李志",
+                    "lyric": "W3RpOiDnm7jkv6HmnKrmnaXluo/mm7JdClthcjog5p2O5b+XXQpbYWw6IOadjuW/lyDnlLXlo7DkuI7nrqHlvKbkuZBJSShMaXZlKV0KW2J5OiDlpKnprYJdClt0b29sOiDmrYzor43mu5rliqjlp6wgaHR0cHM6Ly9scmMtbWFrZXIuZ2l0aHViLmlvXQpbbGVuZ3RoOiAwNTowNi40NDNdClswMDowMC44MV0g55u45L+h5pyq5p2l5bqP5puyIC0g5p2O5b+XClswMDowMzowMF0g57qv6Z+z5LmQ"
+                },
+                {
+                    "thumb": "https://i.kfs.io/album/global/45834383,0v1/fit/500x500.jpg",
+                    "url": "https://prqbmw.ch.files.1drv.com/y4mPZ3637aLpA7VHnUloEO1BfiFGMCHOLVeYqjGTJuvPlmWBakjkcrGWFxwzj8waRXrSxLtKi3LpsgLHmThtA3xTfxYCuV-dmoGAChePLJB5pZ-RCutjxEKaPzRVP6GK62LEGGzo9RCMq7aDV8x2vxpFwZTVKakYm0f2KfcYITFI3gnVOSqj0ISM_-R4tv6WRiZLMstTVlQeODscd5TCVEMtbr5nILa8VaLr6wKg1loH_Y/%E4%B8%80%E5%A4%B4%E5%81%B6%E5%83%8F%20(%E7%9B%B8%E4%BF%A1%E6%9C%AA%E6%9D%A5%E7%89%88)%20-%20%E6%9D%8E%E5%BF%97.flac",
+                    "title": "一头偶像(相信未来版)",
+                    "artist": "李志",
+                    "lyric": "W3RpOiDkuIDlpLTlgbblg48gKOebuOS/oeacquadpeeJiCldClthcjog5p2O5b+XXQpbYWw6IOadjuW/lyDnlLXlo7DkuI7nrqHlvKbkuZBJSShMaXZlKV0KW2J5OiDlpKnprYJdClt0b29sOiDmrYzor43mu5rliqjlp6wgaHR0cHM6Ly9scmMtbWFrZXIuZ2l0aHViLmlvXQpbbGVuZ3RoOiAwNDo0OS4zOTddClswMDowMC44MTddIOS4gOWktOWBtuWDjyAo55u45L+h5pyq5p2l54mIKSAtIOadjuW/lwpbMDA6MDEuOTEwXSDor43vvJrmnY7lv5cKWzAwOjAyLjgxMl0g5puy77ya5p2O5b+XClswMDowMy44NTZdIOe8luabsu+8mumZiOS8n+a0i+iRsea1k+axpOS8pi/lvpDmoqfmoZAKWzAwOjA0LjY5Ml0g5Yi25L2c5Lq677ya6ZmI5Lyf5LymClswMDowNS42MDJdIOmfs+S5kOaAu+ebke+8mumZiOS8n+S8pgpbMDA6MDcuMDU0XSDpvJPvvJrkvZnotaPlroEKWzAwOjA3LjkyOV0g5ZCJ5LuW77ya6KKB6ZOuL+i1teawuOW6hgpbMDA6MDguNzE1XSDotJ3mlq/vvJrlvKDpm68KWzAwOjA5LjY2NV0g6ZSu55uY77ya6YOt5pix5qyjClswMDoxMC4zOTNdIOaJk+WHu+S5kO+8mumtj+aYnwpbMDA6MTEuMjAwXSDlj6PnkLTvvJrpmYjlso0KWzAwOjExLjk2M10g5Ly05ZSx77ya5pyx5qC85LmQL+mYv+eOm+Wmri/lvKDmgKHnhLYKWzAwOjEyLjg4OF0g566h5bym5LmQ77ya6Z2z5rW36Z+zP+euoeW8puS5kOWbogpbMDA6MTMuNjUwXSBQcm9ncmFt5bel56iL5pON5L2c77ya5p2O5aSp6ZuEClswMDoxNC44MTJdIFByb2dyYW3liLbkvZzvvJrpmYjkvJ/kvKYv5b6Q5qKn5qGQL+ael+aso+eRgApbMDA6MTUuODM5XSBQcm9ncmFt5b2V6Z+z77yaVFRM5b2V6Z+z5qOaClswMDoxNi41MTddIOW9lemfs+W4iO+8muWnnOWMl+eUny/njovnq7nmoLkKWzAwOjE3LjI1NF0g5re36Z+z5biI77ya5aec5YyX55SfClswMDoxOC4zNjJdIOavjeW4puW3peeoi+W4iO+8muWnnOWMl+eUnwpbMDA6MTkuNDgwXSDmt7fpn7Mv5q+N5bim5bel5L2c5a6k77yaUy5BLkflvZXpn7Pmo5oKWzAwOjIzLjg5OV0KWzAwOjU2LjY4Ml0g6L+Z5LiA5aSpIOS9oOiDveaOp+WItuS9oOeahOi6q+S9kwpbMDE6MDIuMjA2XSDnlKjnnaHnnKDmiorniZnnl5vlkozkvKTmhJ/mirnljrsKWzAxOjA4LjcxOV0g5riF5pmo5LqU54K5IOS9oOimgei1sOWHuuS9oOeahOaIv+mXtApbMDE6MTUuMDc5XSDkuIDlj6rmh7Xmh4LnmoTpurvpm4DmiorkvaDmkIXkubEKWzAxOjIyLjM2M10g5LiA5p2h6IW/IOS4gOWPquecvOedm+eejuS6hgpbMDE6MjcuOTM5XSDkuIDmoLnng5/nmoTnh4Png6forqnkvaDppb/kuoYKWzAxOjM0LjI0OF0g6IO95Y675ZOq6YeMIOivpeWOu+WTqumHjApbMDE6NDAuNTQ5XSDplJnkubHnmoTohJrmraXku7/kvZvlg4/kuIDlj6rojYnni5cKWzAxOjQ3LjA3MV0g5LuW5Lus55yL5L2gIOS7luS7rOeci+edgOS8n+Wkp+eahOS9oApbMDE6NTMuNDM2XSDohLHnprvml7bku6PnmoTnnLznpZ7lg4/kuIDluYXnlLsKWzAxOjU5Ljk2NF0g5LiN6IO95L6d5oGLIOWTquaAleWJjemdoumbvuawtOi/nue7tQpbMDI6MDYuMTQ1XSDor6XotbDkuIvljrsg6IO96aG26L+H5Y675LiN5piv5ZCXClswMjo1OC4zMDVdIOS4gOmYtemjjiDkuIDniYfmoJHlj7bpu4TkuoYKWzAzOjAzLjk4OF0g5LiA56KX6Z2i55qE5ZGz6YGT6K6p5L2g6aW/5LqGClswMzoxMC4wMDVdIOi9puadpei9puW+gCDlranlrZDku6znnIvotbfmnaXlvojlv5kKWzAzOjE3LjExNF0g5Y+95Y+95Zaz5Zaz55qE5aW95YOP5oqK5LiA5YiH5oul5pyJClswMzoyMy4zMDVdIOS7luS7rOeci+S9oCDku5bku6znnIvnnYDpmYznlJ/nmoTkvaAKWzAzOjI5LjQ1OV0g55Wl5bim5auM5byD55qE55y856We5YOP5LiA5bmF55S7ClswMzozNS45NTVdIOS4jeiDvemAl+eVmSDkvaDmmK/ku5bku6znnLzkuK3nmoTni5cKWzAzOjQxLjk2Ml0g5LiN6IO956C05Z2PIOS4jeiDvemHjeadpeS4jeaYr+WQlwpbMDM6NDguOTE0XSDku5bku6znnIvkvaAg5LuW5Lus55yL552A6ZmM55Sf55qE5L2gClswMzo1NS4wNTVdIOeVpeW4puWrjOW8g+eahOecvOelnuWDj+S4gOW5heeUuwpbMDQ6MDEuNTczXSDkuI3og73pgJfnlZkg5L2g5piv5Lq66Ze05bmz5Yeh55qE54uXClswNDowOC4xNjJdIOivpei1sOS4i+WOuyDog73pobbov4fljrvkuI3mmK/lkJc="
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45834418,0v1/fit/500x500.jpg",
+            "name": "爵士樂與不插電新編12首",
+            "issueDate": "2018-04-16",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45832938,0v1/fit/500x500.jpg",
+            "name": "李志、電聲與管弦樂",
+            "issueDate": "2017-05-16",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45832279,0v1/fit/500x500.jpg",
+            "name": "在每一條傷心的應天大街上",
+            "issueDate": "2016-11-20",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45826116,0v1/fit/500x500.jpg",
+            "name": "捌",
+            "issueDate": "2016-10-18",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45830532,0v1/fit/500x500.jpg",
+            "name": "李志北京不插電現場",
+            "issueDate": "2016-08-11",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45827988,0v1/fit/500x500.jpg",
+            "name": "動靜",
+            "issueDate": "2016-03-14",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45434848,0v1/fit/500x500.jpg",
+            "name": "看見",
+            "issueDate": "2015-06-27",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45432442,0v1/fit/500x500.jpg",
+            "name": "i/O",
+            "issueDate": "2015-01-21",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45438107,0v2/fit/500x500.jpg",
+            "name": "1701",
+            "issueDate": "2014-11-13",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45437525,0v1/fit/500x500.jpg",
+            "name": "勾三搭四",
+            "issueDate": "2014-04-01",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45435114,0v2/fit/500x500.jpg",
+            "name": "108個關鍵字",
+            "issueDate": "2012-12-31",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45435121,0v1/fit/500x500.jpg",
+            "name": "F",
+            "issueDate": "2011-09-28",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45437532,0v1/fit/500x500.jpg",
+            "name": "你好,鄭州",
+            "issueDate": "2010-09-01",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45433578,0v1/fit/500x500.jpg",
+            "name": "我愛南京",
+            "issueDate": "2009-09-09",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45151278,0v1/fit/500x500.jpg",
+            "name": "工體東路沒有人",
+            "issueDate": "2009-01-22",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45436873,0v1/fit/500x500.jpg",
+            "name": "這個世界會好嗎2015",
+            "issueDate": "2006-11-06",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45149879,0v1/fit/500x500.jpg",
+            "name": "這個世界會好嗎",
+            "issueDate": "2006-11-06",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45835640,0v1/fit/500x500.jpg",
+            "name": "梵高先生",
+            "issueDate": "2005-12-01",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        },
+        {
+            "cover": "https://i.kfs.io/album/global/45149196,0v1/fit/500x500.jpg",
+            "name": "被禁忌的遊戲",
+            "issueDate": "2004-12-01",
+            "songs": [
+                {
+                    "thumb": "",
+                    "url": "",
+                    "title": "",
+                    "artist": "",
+                    "lyric": ""
+                }
+            ]
+        }
+    ]
+}
