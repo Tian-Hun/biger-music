@@ -114,8 +114,8 @@ export class PlayerService {
                 onseek: () => requestAnimationFrame(this.step.bind(this)),
                 onload: () => this._progressLoaded.next(true),
                 onend: () => !this.sound.loop() && this.skip(this.randomLoop ? Direction.random : Direction.next),
-                onloaderror: () => this.skip(Direction.next),
-                onplayerror: () => this.skip(Direction.next)
+                onloaderror: err => console.log(err),
+                onplayerror: err => console.log(err)
             });
         }
 
