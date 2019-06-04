@@ -27,6 +27,11 @@ export class MiniPlayerComponent implements OnInit, OnDestroy {
     loopMode: LoopMode;
     progressSubject: Observable<number> = new Subject<number>();
     volumeSubject: Observable<number> = new Subject<number>();
+    loaded: boolean;
+
+    get volume(): number {
+        return this.player.volume() as number;
+    }
 
     constructor(
         private player: PlayerService
@@ -44,6 +49,10 @@ export class MiniPlayerComponent implements OnInit, OnDestroy {
                 filter(song => !!song)
             )
             .subscribe(song => this.song = song);
+
+        this.progress
+            .loaded
+            .subscribe(loaded => this.loaded = loaded);
 
         this.player
             .playingChange

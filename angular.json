@@ -34,7 +34,9 @@
                                 "src/scss"
                             ]
                         },
-                        "scripts": [],
+                        "scripts": [
+                            "./node_modules/gsap/umd/TweenMax.js"
+                        ],
                         "es5BrowserSupport": true
                     },
                     "configurations": {
@@ -53,7 +55,7 @@
                             "aot": true,
                             "extractLicenses": true,
                             "vendorChunk": false,
-                            "buildOptimizer": true,
+                            "buildOptimizer": false,
                             "budgets": [
                                 {
                                     "type": "initial",

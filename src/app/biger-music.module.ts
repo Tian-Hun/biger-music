@@ -1,12 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgForageModule, NgForageConfig, Driver } from 'ngforage';
+import { DEFAULT_CONFIG, Driver, NgForageOptions } from 'ngforage';
 import 'hammerjs';
 
-import { CoreModule } from './core/core.module';
-import { SharedModule } from './shared/shared.module';
+import { CoreModule } from '@core/core.module';
+import { SharedModule } from '@shared/shared.module';
 import { BigerMusicRoutingModule } from './biger-music-routing.module';
 import { BigerMusicComponent } from './biger-music.component';
+
+const ngForageOptions: NgForageOptions = {
+    name: 'BigerMusic',
+    driver: [ // defaults to indexedDB -> webSQL -> localStorage
+        Driver.INDEXED_DB,
+        Driver.LOCAL_STORAGE
+    ]
+};
 
 @NgModule({
     declarations: [
@@ -14,22 +22,17 @@ import { BigerMusicComponent } from './biger-music.component';
     ],
     imports: [
         BrowserModule,
-        NgForageModule.forRoot(),
         CoreModule,
         SharedModule,
         BigerMusicRoutingModule,
     ],
-    providers: [],
+    providers: [
+        {
+            provide: DEFAULT_CONFIG,
+            useValue: ngForageOptions
+        }
+    ],
     bootstrap: [BigerMusicComponent]
 })
 export class BigerMusicModule {
-    constructor(ngfConfig: NgForageConfig) {
-        ngfConfig.configure({
-            name: 'BigerMusic',
-            driver: [ // defaults to indexedDB -> webSQL -> localStorage
-                Driver.INDEXED_DB,
-                Driver.LOCAL_STORAGE
-            ]
-        });
-    }
 }

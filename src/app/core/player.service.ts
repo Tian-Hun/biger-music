@@ -98,6 +98,7 @@ export class PlayerService {
             this._sound = song.howl = new Howl({
                 src: [song.url],
                 preload: true,
+                html5: false,
                 onplay: () => {
                     this.playingChange.next(true);
                     this._progressLoaded.next(true);

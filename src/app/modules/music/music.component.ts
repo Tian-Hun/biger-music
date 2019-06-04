@@ -99,8 +99,8 @@ export class MusicComponent implements OnInit, OnDestroy {
             this.frequencyBarGraphs.barHeight = this.dataArray[i];
 
             const r = this.frequencyBarGraphs.barHeight + ((i / this.bufferLength) * 150);
-            const g = (i / this.bufferLength) * 20;
-            const b = 10;
+            const g = (i / this.bufferLength) * 100;
+            const b = 50;
 
             this.frequencyBarGraphs.ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
             this.frequencyBarGraphs.ctx.fillRect(
@@ -128,20 +128,20 @@ export class MusicComponent implements OnInit, OnDestroy {
 }
 
 export function parseLyric(lyric: string): any {
-    let lines = lyric.split('\n');
+    const lines = lyric.split('\n');
     const pattern = /\[\d{2}:\d{2}.\d{2}\]/g;
     const result = [];
-    while (!pattern.test(lines[0])) {
-        lines = lines.slice(1);
-    }
+
     lines[lines.length - 1].length === 0 && lines.pop();
     for (const data of lines) {
-        const index = data.indexOf(']');
-        const time = data.substring(0, index + 1);
-        const value = data.substring(index + 1);
-        const timeString = time.substring(1, time.length - 2);
-        const timeArr = timeString.split(':');
-        result.push([parseInt(timeArr[0], 10) * 60 + parseFloat(timeArr[1]), value]);
+        if (pattern.exec(data)) {
+            const index = data.indexOf(']');
+            const time = data.substring(0, index + 1);
+            const value = data.substring(index + 1);
+            const timeString = time.substring(1, time.length - 2);
+            const timeArr = timeString.split(':');
+            result.push([parseInt(timeArr[0], 10) * 60 + parseFloat(timeArr[1]), value]);
+        }
     }
     result.sort((a, b) => a[0] - b[0]);
 
