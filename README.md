@@ -7,6 +7,5 @@
 
 ---------
 
-> 音频来源: https://github.com/PetalsOnaWet/lizhi/  
 
 > 歌词编辑工具: https://github.com/magic-akari/lrc-maker
