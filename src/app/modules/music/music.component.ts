@@ -129,15 +129,16 @@ export class MusicComponent implements OnInit, OnDestroy {
 
 export function parseLyric(lyric: string): any {
     const lines = lyric.split('\n');
-    const pattern = /\[\d{2}:\d{2}.\d{2}\]/g;
+    const pattern = /\[(\d{2,}):(\d{2})(?:\.(\d{2,3}))?]/;
     const result = [];
 
     lines[lines.length - 1].length === 0 && lines.pop();
-    for (const data of lines) {
-        if (pattern.exec(data)) {
-            const index = data.indexOf(']');
-            const time = data.substring(0, index + 1);
-            const value = data.substring(index + 1);
+
+    for (const line of lines) {
+        if (pattern.test(line)) {
+            const index = line.indexOf(']');
+            const time = line.substring(0, index + 1);
+            const value = line.substring(index + 1);
             const timeString = time.substring(1, time.length - 2);
             const timeArr = timeString.split(':');
             result.push([parseInt(timeArr[0], 10) * 60 + parseFloat(timeArr[1]), value]);
