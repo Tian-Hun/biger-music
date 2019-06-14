@@ -11,7 +11,7 @@
 
 #### 已添加的专辑:
 
-> ![洗心革面](http://media.webhcj.net/items/F85B50B58B003D55!576:/xxgm.jpeg?authkey=AIi2BPhsvSW-Bd0)
+> ![洗心革面](http://media.webhcj.net/items/F85B50B58B003D55!590:/xxgm.jpg?authkey=AIi2BPhsvSW-Bd0)
 
 #### 第三方
 > 歌词编辑工具: https://github.com/magic-akari/lrc-maker
