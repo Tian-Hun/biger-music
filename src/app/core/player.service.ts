@@ -126,11 +126,11 @@ export class PlayerService {
         return formatTime(Math.round(this.sound.duration()));
     }
 
-    public play(index = 0): void {
-        if (this.currentIndex !== index) {
+    public play(index?): void {
+        if (index !== void(0)) {
             this.currentIndex = index;
-            this.songChange.next(this._playlist[this.currentIndex]);
         }
+        this.songChange.next(this._playlist[this.currentIndex]);
         this.sound.play();
     }
 
