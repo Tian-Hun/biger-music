@@ -92,7 +92,7 @@ export class PlayerService {
 
     get sound(): Howl {
         const song = this._playlist[this.currentIndex];
-        if (song.howl) {
+        if (song.howl && song.howl.state() !== 'unloaded') {
             this._sound = song.howl;
         } else {
             this._sound = song.howl = new Howl({
@@ -162,7 +162,11 @@ export class PlayerService {
     public skipTo(index: number): void {
         const song = this._playlist[this.currentIndex];
         if (song.howl) {
-            song.howl.stop();
+            if (song.howl.state() === 'loading') {
+                song.howl.unload();
+            } else {
+                song.howl.stop();
+            }
         }
 
         this.play(index);
